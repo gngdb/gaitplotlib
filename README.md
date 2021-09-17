@@ -49,7 +49,10 @@ A console script is provided to unpack the body models:
 unpack_body_models <directory containing archives> <smpl/smplh>
 ```
 
-This will unpack the body model archives and put them in the format matching what [SMPL-X][smplx] expects (because I originally planned to use that code).
+This will do two things:
+
+1. Unpack the body model archives and put them in the format matching what [SMPL-X][smplx] expects (because I originally planned to use that code)
+2. Create symbolic links in `~/.config/gaitplotlib` to find the unpacked body models later when using them for plotting
 
 [smplx]: https://github.com/vchoutas/smplx
 
@@ -81,20 +84,20 @@ with tempfile.TemporaryDirectory() as tmpdirname:
             data = np.load(npz_loc)
 ```
 
-    loading from /tmp/tmpc0vb3gf9/sample/subdir/amass_sample.npz
+    loading from /tmp/tmpf5m0ezk6/sample/subdir/amass_sample.npz
 
 
-### Matplotlib Example
-
-```
+```python
+# smplh
 import matplotlib.pyplot as plt
-plt.style.use('ggplot')
+
+plt.style.use("ggplot")
 
 for d in range(3):
     dims_to_plot = [i for i in range(3) if i != d]
-    joints, skeleton = params[0]['joints'], params.skeleton
-    j = joints[:,dims_to_plot]
-    plt.scatter(*j.T, color='r', s=0.2)
+    joints, skeleton = params[0]["joints"], params.skeleton
+    j = joints[:, dims_to_plot]
+    plt.scatter(*j.T, color="r", s=0.2)
     # dim limits must match or figure will be distorted
     xl, yl = plt.xlim(), plt.ylim()
     l = (min(xl[0], yl[0]), max(xl[1], yl[1]))
@@ -104,29 +107,19 @@ for d in range(3):
         a = j[bone[0]]
         b = j[bone[1]]
         x, y = list(zip(a, b))
-        plt.plot(x, y, color='r', alpha=0.5)
-    plotted_dims = ''.join(['x', 'y', 'z'][i] for i in dims_to_plot)
-    plt.savefig(f'images/example_2d_{plotted_dims}.png')
+        plt.plot(x, y, color="r", alpha=0.5)
+    plotted_dims = "".join(["x", "y", "z"][i] for i in dims_to_plot)
     plt.show()
 ```
 
-    images/example_2d_xy.png
+
+![png](docs/images/output_8_0.png)
 
 
 
-![png](docs/images/output_9_1.png)
-
-
-    images/example_2d_yz.png
+![png](docs/images/output_8_1.png)
 
 
 
-![png](docs/images/output_9_3.png)
-
-
-    images/example_2d_xz.png
-
-
-
-![png](docs/images/output_9_5.png)
+![png](docs/images/output_8_2.png)
 
