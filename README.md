@@ -71,6 +71,19 @@ skeleton: torch.Size([51, 2])
 > print({k:v.shape for k,v in params[0].items()}){'vertices': torch.Size([6890, 3]), 'joints': torch.Size([52, 3]), 'faces': torch.Size([13776, 3]), 'skeleton': torch.Size([51, 2])}
 ```
 
+```python
+# smplh
+with tempfile.TemporaryDirectory() as tmpdirname:
+    shutil.unpack_archive("sample_data/sample.tar.bz2", extract_dir=tmpdirname)
+    for npz_loc in (Path(tmpdirname) / "sample" / "subdir").glob("*.npz"):
+        if "amass" in npz_loc.name:
+            print(f"loading from {npz_loc}")
+            data = np.load(npz_loc)
+```
+
+    loading from /tmp/tmpc0vb3gf9/sample/subdir/amass_sample.npz
+
+
 ### Matplotlib Example
 
 ```
@@ -101,19 +114,19 @@ for d in range(3):
 
 
 
-![png](docs/images/output_8_1.png)
+![png](docs/images/output_9_1.png)
 
 
     images/example_2d_yz.png
 
 
 
-![png](docs/images/output_8_3.png)
+![png](docs/images/output_9_3.png)
 
 
     images/example_2d_xz.png
 
 
 
-![png](docs/images/output_8_5.png)
+![png](docs/images/output_9_5.png)
 
