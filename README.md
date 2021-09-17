@@ -15,6 +15,9 @@ Requirements:
 - [matplotlib][] although the points and meshes could be plotted in other frameworks
 - [smplx][] (only to provide annotations for the SMPL-H joint names)
 
+I think it might be legally necessary to sign up on the [SMPLX project page][smplxproject] in order to use `smplx` and `human_body_prior`?
+
+[smplxproject]: https://smpl-x.is.tue.mpg.de/
 [matplotlib]: https://matplotlib.org/
 [mediapy]: https://github.com/google/mediapy
 [chumpy]: https://github.com/mattloper/chumpy

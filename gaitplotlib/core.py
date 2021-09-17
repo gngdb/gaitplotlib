@@ -163,12 +163,12 @@ def console_unpack():
     )
     args = parser.parse_args()
     bmdir = Path(args.bmdir)
-    if args.smpl:
+    if args.type == 'smpl':
         unpack_smpl(bmdir)
         canonical_smpl_names(bmdir)
         for bmloc in bmdir.glob("smpl/*.npz"):
             create_bmlink(bmloc)
-    elif args.smplh:
+    elif args.type == 'smplh':
         unpack_smplh(bmdir)
         manoloc = next(bmdir.glob("mano*.zip"))
         if Path(manoloc).exists():
@@ -182,7 +182,8 @@ from human_body_prior.body_model.body_model import BodyModel
 
 def init_body_model(subject_gender, num_betas=16, num_dmpls=8):
     bm_fname = Path.home() / f".config/gaitplotlib/SMPLH_{subject_gender.upper()}.npz"
-    assert bm_fname.is_symlink()
+    assert bm_fname.is_symlink(), 'No symlink found, have you remembered to unpack the body models?'\
+                                  ' See: https://github.com/gngdb/gaitplotlib#unpack-body-models'
     return BodyModel(bm_fname=str(bm_fname), num_betas=num_betas)
 
 # Cell
