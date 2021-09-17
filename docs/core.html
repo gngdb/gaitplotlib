@@ -82,7 +82,7 @@ nb_path: "00_core.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Load-Sample-Data">Load Sample Data<a class="anchor-link" href="#Load-Sample-Data"> </a></h1><p>This data is going to be used for testing and examples.</p>
+<h2 id="Load-Sample-Data">Load Sample Data<a class="anchor-link" href="#Load-Sample-Data"> </a></h2><p>This data is going to be used for testing and examples.</p>
 
 </div>
 </div>
@@ -164,7 +164,7 @@ trans
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unpacking-Body-Models">Unpacking Body Models<a class="anchor-link" href="#Unpacking-Body-Models"> </a></h1><blockquote><p>AMASS uses the SMPL-H human body model, this unpacks it into a standard directory structure.</p>
+<h2 id="Unpacking-Body-Models">Unpacking Body Models<a class="anchor-link" href="#Unpacking-Body-Models"> </a></h2><blockquote><p>AMASS uses the SMPL-H human body model, this unpacks it into a standard directory structure.</p>
 </blockquote>
 <p>To run this you need to have downloaded the SMPL-H model archive from the <a href="https://mano.is.tue.mpg.de/">MANO webpage</a>.</p>
 <p>Unfortunately, I can't include this in the repository for two reasons:1. It's over 100MB2. I would be breaking the model license</p>
@@ -547,7 +547,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Symbolic-Link">Symbolic Link<a class="anchor-link" href="#Symbolic-Link"> </a></h2><blockquote><p>The library will need to know where to look for the body models later, so create a symbolic link.</p>
+<h3 id="Symbolic-Link">Symbolic Link<a class="anchor-link" href="#Symbolic-Link"> </a></h3><blockquote><p>The library will need to know where to look for the body models later, so create a symbolic link.</p>
 </blockquote>
 
 </div>
@@ -646,7 +646,7 @@ Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/ga
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Console-Script">Console Script<a class="anchor-link" href="#Console-Script"> </a></h2><blockquote><p>Definition for a console script that performs the unpacking from the command line.</p>
+<h3 id="Console-Script">Console Script<a class="anchor-link" href="#Console-Script"> </a></h3><blockquote><p>Definition for a console script that performs the unpacking from the command line.</p>
 </blockquote>
 
 </div>
@@ -722,17 +722,22 @@ Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/ga
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotting-Using-human_body_prior">Plotting Using <code>human_body_prior</code><a class="anchor-link" href="#Plotting-Using-human_body_prior"> </a></h1><blockquote><p>Building on the AMASS demo to plot poses</p>
+<h2 id="Plotting-Using-human_body_prior">Plotting Using <code>human_body_prior</code><a class="anchor-link" href="#Plotting-Using-human_body_prior"> </a></h2><blockquote><p>Building on the AMASS demo to plot poses</p>
 </blockquote>
-<p>The [AMASS demos][demo] demonstrate how to use the body models in [human_body_prior][hbp] to plot poses. I'm going to use that code there to plot poses in matplotlib.</p>
-<p>[hbp]:<a href="https://github.com/nghorbani/human_body_prior[demo">https://github.com/nghorbani/human_body_prior[demo</a>]: <a href="https://github.com/nghorbani/amass/tree/master/notebooks">https://github.com/nghorbani/amass/tree/master/notebooks</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Extract-Joints,-Vertices-and-Faces">Extract Joints, Vertices and Faces<a class="anchor-link" href="#Extract-Joints,-Vertices-and-Faces"> </a></h2><blockquote><p>Functions to load absolute 3D joint locations, vertices and faces for plotting</p>
+<p>The <a href="https://github.com/nghorbani/amass/tree/master/notebooks">AMASS demos</a> demonstrate how to use the body models in <a href="https://github.com/nghorbani/human_body_prior">human_body_prior</a> to plot poses. I'm going to use that code there to plot poses in matplotlib.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Extract-Joints,-Vertices-and-Faces">Extract Joints, Vertices and Faces<a class="anchor-link" href="#Extract-Joints,-Vertices-and-Faces"> </a></h3><blockquote><p>Functions to load absolute 3D joint locations, vertices and faces for plotting</p>
 </blockquote>
 
 </div>
@@ -932,7 +937,7 @@ a set of angles into plottable coordinates in 3D space.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plotting-with-Matplotlib">Plotting with Matplotlib<a class="anchor-link" href="#Plotting-with-Matplotlib"> </a></h2>
+<h3 id="Plotting-with-Matplotlib">Plotting with Matplotlib<a class="anchor-link" href="#Plotting-with-Matplotlib"> </a></h3>
 </div>
 </div>
 </div>
@@ -1115,7 +1120,7 @@ a set of angles into plottable coordinates in 3D space.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="SMPL-H-Joint-Names">SMPL-H Joint Names<a class="anchor-link" href="#SMPL-H-Joint-Names"> </a></h1><blockquote><p>Access the SMPL-H Joint Names.</p>
+<h2 id="SMPL-H-Joint-Names">SMPL-H Joint Names<a class="anchor-link" href="#SMPL-H-Joint-Names"> </a></h2><blockquote><p>Access the SMPL-H Joint Names.</p>
 </blockquote>
 <p>I don't know where else this is available in the MPI documentation. I found it <a href="https://github.com/vchoutas/smplx/blob/master/smplx/joint_names.py#L166-L240">hidden in the SMPLX code</a>.</p>
 
