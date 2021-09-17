@@ -17,6 +17,6 @@ modules = ["core.py"]
 
 doc_url = "https://gngdb.github.io/gaitplotlib/"
 
-git_url = "https://github.com/gngdb/gaitplotlib/tree/main/"
+git_url = "https://github.com/gngdb/gaitplotlib/tree/master/"
 
 def custom_doc_links(name): return None
