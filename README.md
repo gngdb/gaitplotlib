@@ -1,5 +1,5 @@
 # gaitplotlib
-> Lightweight way to map from SMPL/SMPL-H parameters to plottable coordinates/meshes in 3D space
+> A way to map from SMPL/SMPL-H parameters to plottable coordinates/meshes in 3D space
 
 
 This library is supposed to make it easier to convert from SMPL-H/SMPL parameters, which have become the de facto pose representation in the literature, into points and meshes that can be plotted in different visualisation packages.
