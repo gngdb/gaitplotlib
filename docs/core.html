@@ -112,7 +112,7 @@ nb_path: "00_core.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>loading from /tmp/tmpzviznazn/sample/subdir/amass_sample.npz
+<pre>loading from /tmp/tmpi6yo8887/sample/subdir/amass_sample.npz
 </pre>
 </div>
 </div>
@@ -180,8 +180,7 @@ trans
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enable_tests</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">model_folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;body_models&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;body_models&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -202,7 +201,7 @@ trans
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="unpack_smpl" class="doc_header"><code>unpack_smpl</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smpl</code>(<strong><code>smpl_dir</code></strong>)</p>
+<h4 id="unpack_smpl" class="doc_header"><code>unpack_smpl</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smpl</code>(<strong><code>smpl_dir</code></strong>)</p>
 </blockquote>
 <p><code>smplx.create</code> expects pkl files to be in SMPL directory,
 but this is not the structure of unzipped SMPL archives.
@@ -271,7 +270,7 @@ This function fixes that.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="unpack_smplh" class="doc_header"><code>unpack_smplh</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L28" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh</code>(<strong><code>smplh_dir</code></strong>)</p>
+<h4 id="unpack_smplh" class="doc_header"><code>unpack_smplh</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L30" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh</code>(<strong><code>smplh_dir</code></strong>)</p>
 </blockquote>
 <p><code>smplx.create</code> expects pkl files to be in <code>smplh</code> directory</p>
 
@@ -323,8 +322,7 @@ This function fixes that.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">enable_tests</span><span class="p">:</span>
-    <span class="n">_</span> <span class="o">=</span> <span class="n">unpack_smplh</span><span class="p">(</span><span class="n">model_folder</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">unpack_smplh</span><span class="p">(</span><span class="n">model_folder</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -345,7 +343,7 @@ This function fixes that.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="unpack_smplh_from_mano" class="doc_header"><code>unpack_smplh_from_mano</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L46" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh_from_mano</code>(<strong><code>smplh_dir</code></strong>, <strong><code>use_smplh_archive</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="unpack_smplh_from_mano" class="doc_header"><code>unpack_smplh_from_mano</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L49" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh_from_mano</code>(<strong><code>smplh_dir</code></strong>, <strong><code>use_smplh_archive</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 
 </div>
@@ -490,7 +488,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="canonical_smpl_names" class="doc_header"><code>canonical_smpl_names</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L116" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>canonical_smpl_names</code>(<strong><code>smpl_dir</code></strong>)</p>
+<h4 id="canonical_smpl_names" class="doc_header"><code>canonical_smpl_names</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L125" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>canonical_smpl_names</code>(<strong><code>smpl_dir</code></strong>)</p>
 </blockquote>
 <p>Canonical naming convention for SMPL body model files</p>
 
@@ -573,7 +571,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_bmlink" class="doc_header"><code>create_bmlink</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L127" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_bmlink</code>(<strong><code>bmloc</code></strong>)</p>
+<h4 id="create_bmlink" class="doc_header"><code>create_bmlink</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L139" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_bmlink</code>(<strong><code>bmloc</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -617,14 +615,29 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">enable_tests</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">bmloc</span> <span class="ow">in</span> <span class="n">model_folder</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;smplh/*.npz&quot;</span><span class="p">):</span>
-        <span class="n">create_bmlink</span><span class="p">(</span><span class="n">bmloc</span><span class="p">)</span>
-    <span class="n">linkloc</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;.config/gaitplotlib/SMPLH_NEUTRAL.npz&quot;</span>
-    <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">linkloc</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">bmloc</span> <span class="ow">in</span> <span class="n">model_folder</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;smplh/*.npz&quot;</span><span class="p">):</span>
+    <span class="n">create_bmlink</span><span class="p">(</span><span class="n">bmloc</span><span class="p">)</span>
+<span class="n">linkloc</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;.config/gaitplotlib/SMPLH_NEUTRAL.npz&quot;</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">linkloc</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Creating symlink to body_models/smplh/SMPLH_MALE.npz at /home/gngdb/.config/gaitplotlib/SMPLH_MALE.npz
+Creating symlink to body_models/smplh/SMPLH_NEUTRAL.npz at /home/gngdb/.config/gaitplotlib/SMPLH_NEUTRAL.npz
+Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/gaitplotlib/SMPLH_FEMALE.npz
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -650,7 +663,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="console_unpack" class="doc_header"><code>console_unpack</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L140" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>console_unpack</code>()</p>
+<h4 id="console_unpack" class="doc_header"><code>console_unpack</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L153" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>console_unpack</code>()</p>
 </blockquote>
 
 </div>
@@ -736,7 +749,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="init_body_model" class="doc_header"><code>init_body_model</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L165" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>init_body_model</code>(<strong><code>subject_gender</code></strong>, <strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>num_dmpls</code></strong>=<em><code>8</code></em>)</p>
+<h4 id="init_body_model" class="doc_header"><code>init_body_model</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L183" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>init_body_model</code>(<strong><code>subject_gender</code></strong>, <strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>num_dmpls</code></strong>=<em><code>8</code></em>)</p>
 </blockquote>
 
 </div>
@@ -791,7 +804,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="sample_betas" class="doc_header"><code>sample_betas</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L173" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sample_betas</code>(<strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>seed</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="sample_betas" class="doc_header"><code>sample_betas</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L189" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sample_betas</code>(<strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>seed</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -815,7 +828,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plottable" class="doc_header"><code>plottable</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L177" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plottable</code>(<strong><code>pose_angles</code></strong>, <strong><code>betas</code></strong>=<em><code>None</code></em>, <strong><code>gender</code></strong>=<em><code>'neutral'</code></em>)</p>
+<h4 id="plottable" class="doc_header"><code>plottable</code><a href="https://github.com/gngdb/gaitplotlib/tree/main/gaitplotlib/core.py#L194" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plottable</code>(<strong><code>pose_angles</code></strong>, <strong><code>betas</code></strong>=<em><code>None</code></em>, <strong><code>gender</code></strong>=<em><code>'neutral'</code></em>)</p>
 </blockquote>
 <p>Turn a vector or a batch of pose_angles from
 a set of angles into plottable coordinates in 3D space.</p>
@@ -906,9 +919,8 @@ a set of angles into plottable coordinates in 3D space.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">enable_tests</span><span class="p">:</span>
-    <span class="n">pose_angles</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;poses&quot;</span><span class="p">]</span>
-    <span class="n">plottable_params</span> <span class="o">=</span> <span class="n">plottable</span><span class="p">(</span><span class="n">pose_angles</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pose_angles</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;poses&quot;</span><span class="p">]</span>
+<span class="n">plottable_params</span> <span class="o">=</span> <span class="n">plottable</span><span class="p">(</span><span class="n">pose_angles</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1034,17 +1046,32 @@ a set of angles into plottable coordinates in 3D space.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gifloc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;images/example.gif&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">enable_tests</span><span class="p">:</span>
-    <span class="n">img_arrs</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">trimmer</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">plottable_params</span><span class="o">.</span><span class="n">vertices</span><span class="p">),</span> <span class="mi">20</span><span class="p">)):</span>
-        <span class="n">img_arr</span> <span class="o">=</span> <span class="n">plot_pose</span><span class="p">(</span><span class="o">**</span><span class="n">plottable_params</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="k">if</span> <span class="n">trimmer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">trimmer</span> <span class="o">=</span> <span class="n">Trimmer</span><span class="p">(</span><span class="n">img_arr</span><span class="p">)</span>
-        <span class="n">img_arrs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trimmer</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">img_arr</span><span class="p">))</span>
-    <span class="n">video</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">img_arrs</span><span class="p">)</span>
-    <span class="n">gifloc</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">media</span><span class="o">.</span><span class="n">write_video</span><span class="p">(</span><span class="n">gifloc</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">codec</span><span class="o">=</span><span class="s2">&quot;gif&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img_arrs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">trimmer</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">plottable_params</span><span class="o">.</span><span class="n">vertices</span><span class="p">),</span> <span class="mi">20</span><span class="p">)):</span>
+    <span class="n">img_arr</span> <span class="o">=</span> <span class="n">plot_pose</span><span class="p">(</span><span class="o">**</span><span class="n">plottable_params</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">trimmer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">trimmer</span> <span class="o">=</span> <span class="n">Trimmer</span><span class="p">(</span><span class="n">img_arr</span><span class="p">)</span>
+    <span class="n">img_arrs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trimmer</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">img_arr</span><span class="p">))</span>
+<span class="n">video</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">img_arrs</span><span class="p">)</span>
+<span class="n">gifloc</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">media</span><span class="o">.</span><span class="n">write_video</span><span class="p">(</span><span class="n">gifloc</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">codec</span><span class="o">=</span><span class="s2">&quot;gif&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
     </div>
