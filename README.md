@@ -4,12 +4,6 @@
 
 This library is supposed to make it easier to convert from SMPL-H/SMPL parameters, which have become the de facto pose representation in the literature, into points and meshes that can be plotted in different visualisation packages.
 
-## To Do
-
-1. Add note about installing pytorch first
-2. Example plotting a gif here using code from core
-3. Write documentation here describing what this is for
-
 ## Install
 
 Requirements:
