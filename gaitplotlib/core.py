@@ -201,6 +201,8 @@ def plottable(pose_angles, betas=None, gender="neutral"):
         seed = np.sum(np.abs(pose_angles * 100).astype(int))
         betas = sample_betas(seed=seed)
 
+    # inspect pose angles to determine if this is SMPL
+    is_smpl = pose_angles.shape[1] == 72
     time_length = len(pose_angles)
     # map to tensors for body model module
     body_parms = {
@@ -209,6 +211,10 @@ def plottable(pose_angles, betas=None, gender="neutral"):
         "pose_body": pose_angles[:, 3:66],
         "pose_hand": pose_angles[:, 66:],
     }
+    if is_smpl:
+        body_parms["pose_hand"] = np.zeros((pose_angles.shape[0], 3*30))
+    else:
+        body_parms["pose_hand"] = pose_angles[:, 66:]
     body_parms = {k: torch.tensor(body_parms[k]).float() for k in body_parms}
 
     # initialise body model
