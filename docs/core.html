@@ -234,76 +234,7 @@ trans
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="unpack_smpl" class="doc_header"><code>unpack_smpl</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smpl</code>(<strong><code>smpl_dir</code></strong>)</p>
-</blockquote>
-<p><code>smplx.create</code> expects pkl files to be in SMPL directory,
-but this is not the structure of unzipped SMPL archives.
-This function fixes that.</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">unpack_smpl</span><span class="p">(</span><span class="n">smpl_dir</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`smplx.create` expects pkl files to be in SMPL directory,</span>
-<span class="sd">    but this is not the structure of unzipped SMPL archives.</span>
-<span class="sd">    This function fixes that.&quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">pkl_file</span> <span class="ow">in</span> <span class="n">smpl_dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;smpl/models/*.pkl&quot;</span><span class="p">):</span>
-        <span class="n">target</span> <span class="o">=</span> <span class="n">smpl_dir</span> <span class="o">/</span> <span class="s2">&quot;smpl&quot;</span> <span class="o">/</span> <span class="n">pkl_file</span><span class="o">.</span><span class="n">name</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">target</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">pkl_file</span><span class="p">,</span> <span class="s2">&quot;-&gt; &quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">pkl_file</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unpack_smpl</span><span class="p">(</span><span class="n">model_folder</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="unpack_smplh" class="doc_header"><code>unpack_smplh</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L30" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh</code>(<strong><code>smplh_dir</code></strong>)</p>
+<h4 id="unpack_smplh" class="doc_header"><code>unpack_smplh</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh</code>(<strong><code>smplh_dir</code></strong>)</p>
 </blockquote>
 <p><code>smplx.create</code> expects pkl files to be in <code>smplh</code> directory</p>
 
@@ -376,7 +307,7 @@ This function fixes that.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="unpack_smplh_from_mano" class="doc_header"><code>unpack_smplh_from_mano</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L49" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh_from_mano</code>(<strong><code>smplh_dir</code></strong>, <strong><code>use_smplh_archive</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="unpack_smplh_from_mano" class="doc_header"><code>unpack_smplh_from_mano</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L36" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unpack_smplh_from_mano</code>(<strong><code>smplh_dir</code></strong>, <strong><code>use_smplh_archive</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 
 </div>
@@ -510,74 +441,6 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="canonical_smpl_names" class="doc_header"><code>canonical_smpl_names</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L125" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>canonical_smpl_names</code>(<strong><code>smpl_dir</code></strong>)</p>
-</blockquote>
-<p>Canonical naming convention for SMPL body model files</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">canonical_smpl_names</span><span class="p">(</span><span class="n">smpl_dir</span><span class="p">):</span>
-    <span class="s2">&quot;Canonical naming convention for SMPL body model files&quot;</span>
-    <span class="k">for</span> <span class="n">pkl_file</span> <span class="ow">in</span> <span class="n">smpl_dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;smpl/*.pkl&quot;</span><span class="p">):</span>
-        <span class="n">gender</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="s2">&quot;FEMALE&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="s2">&quot;MALE&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">:</span> <span class="s2">&quot;NEUTRAL&quot;</span><span class="p">}[</span>
-            <span class="n">pkl_file</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="p">]</span>
-        <span class="n">target</span> <span class="o">=</span> <span class="n">smpl_dir</span> <span class="o">/</span> <span class="s2">&quot;smpl&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;SMPL_</span><span class="si">{</span><span class="n">gender</span><span class="si">}</span><span class="s2">.pkl&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">target</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">pkl_file</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">pkl_file</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">canonical_smpl_names</span><span class="p">(</span><span class="n">model_folder</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Symbolic-Link">Symbolic Link<a class="anchor-link" href="#Symbolic-Link"> </a></h3><blockquote><p>The library will need to know where to look for the body models later, so create a symbolic link.</p>
@@ -604,7 +467,7 @@ Saving to data with keys [&#39;J_regressor_prior&#39;, &#39;f&#39;, &#39;J_regre
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_bmlink" class="doc_header"><code>create_bmlink</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L139" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_bmlink</code>(<strong><code>bmloc</code></strong>)</p>
+<h4 id="create_bmlink" class="doc_header"><code>create_bmlink</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L112" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_bmlink</code>(<strong><code>bmloc</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -696,7 +559,7 @@ Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/ga
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="console_unpack" class="doc_header"><code>console_unpack</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L153" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>console_unpack</code>()</p>
+<h4 id="console_unpack" class="doc_header"><code>console_unpack</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L126" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>console_unpack</code>()</p>
 </blockquote>
 
 </div>
@@ -787,7 +650,7 @@ Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/ga
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="init_body_model" class="doc_header"><code>init_body_model</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L183" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>init_body_model</code>(<strong><code>subject_gender</code></strong>, <strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>num_dmpls</code></strong>=<em><code>8</code></em>)</p>
+<h4 id="init_body_model" class="doc_header"><code>init_body_model</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L156" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>init_body_model</code>(<strong><code>subject_gender</code></strong>, <strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>num_dmpls</code></strong>=<em><code>8</code></em>)</p>
 </blockquote>
 
 </div>
@@ -843,7 +706,7 @@ Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/ga
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="sample_betas" class="doc_header"><code>sample_betas</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L190" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sample_betas</code>(<strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>seed</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="sample_betas" class="doc_header"><code>sample_betas</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L163" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sample_betas</code>(<strong><code>num_betas</code></strong>=<em><code>16</code></em>, <strong><code>seed</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -867,7 +730,7 @@ Creating symlink to body_models/smplh/SMPLH_FEMALE.npz at /home/gngdb/.config/ga
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plottable" class="doc_header"><code>plottable</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L195" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plottable</code>(<strong><code>pose_angles</code></strong>, <strong><code>betas</code></strong>=<em><code>None</code></em>, <strong><code>gender</code></strong>=<em><code>'neutral'</code></em>)</p>
+<h4 id="plottable" class="doc_header"><code>plottable</code><a href="https://github.com/gngdb/gaitplotlib/tree/master/gaitplotlib/core.py#L168" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plottable</code>(<strong><code>pose_angles</code></strong>, <strong><code>betas</code></strong>=<em><code>None</code></em>, <strong><code>gender</code></strong>=<em><code>'neutral'</code></em>)</p>
 </blockquote>
 <p>Turn a vector or a batch of pose_angles from
 a set of angles into plottable coordinates in 3D space.</p>

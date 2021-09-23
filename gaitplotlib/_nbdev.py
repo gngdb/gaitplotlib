@@ -2,10 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"unpack_smpl": "00_core.ipynb",
-         "unpack_smplh": "00_core.ipynb",
+index = {"unpack_smplh": "00_core.ipynb",
          "unpack_smplh_from_mano": "00_core.ipynb",
-         "canonical_smpl_names": "00_core.ipynb",
          "create_bmlink": "00_core.ipynb",
          "console_unpack": "00_core.ipynb",
          "init_body_model": "00_core.ipynb",
