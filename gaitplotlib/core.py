@@ -170,9 +170,7 @@ def plottable(pose_angles, betas=None, gender="neutral"):
     a set of angles into plottable coordinates in 3D space."""
     # if betas are not passed, sample a random body shape
     if betas is None:
-        # seed so the same poses will get the same body shape
-        seed = np.sum(np.abs(pose_angles * 100).astype(int))
-        betas = sample_betas(seed=seed)
+        betas = np.zeros((1, 16), dtype=np.float32)
 
     # inspect pose angles to determine if this is SMPL
     is_smpl = pose_angles.shape[1] == 72
